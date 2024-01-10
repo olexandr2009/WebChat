@@ -1,7 +1,6 @@
 package com.web.chat.WebChat_Chat_service.repositories;
 
 import com.web.chat.WebChat_Chat_service.entities.ChatEntity;
-import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -6,10 +6,7 @@ import com.web.chat.WebChat_Chat_service.controllers.response.chat.UpdateChatRes
 import com.web.chat.WebChat_Chat_service.controllers.response.message.MessageResponse;
 import com.web.chat.WebChat_Chat_service.controllers.response.user.UserResponse;
 import com.web.chat.WebChat_Chat_service.entities.dtos.chat.ChatDto;
-import com.web.chat.WebChat_Chat_service.entities.dtos.message.MessageDto;
-import com.web.chat.WebChat_Chat_service.exceptions.chat.NotSubscribedException;
 import com.web.chat.WebChat_Chat_service.services.ChatService;
-import com.web.chat.WebChat_Chat_service.services.MessageService;
 import com.web.chat.WebChat_Chat_service.services.mappers.ChatMapper;
 import com.web.chat.WebChat_Chat_service.services.mappers.MessageMapper;
 import com.web.chat.WebChat_Chat_service.services.mappers.UserMapper;

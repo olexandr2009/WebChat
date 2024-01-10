@@ -1,12 +1,10 @@
 package com.web.chat.WebChat_Chat_service.services.impl;
 
-import com.web.chat.WebChat_Chat_service.entities.BaseEntity;
 import com.web.chat.WebChat_Chat_service.entities.ChatEntity;
 import com.web.chat.WebChat_Chat_service.entities.MessageEntity;
 import com.web.chat.WebChat_Chat_service.entities.dtos.message.MessageDto;
 import com.web.chat.WebChat_Chat_service.entities.dtos.message.UpdateMessageDto;
 import com.web.chat.WebChat_Chat_service.exceptions.chat.ChatNotFoundException;
-import com.web.chat.WebChat_Chat_service.exceptions.chat.NotSubscribedException;
 import com.web.chat.WebChat_Chat_service.exceptions.message.MessageNotFoundException;
 import com.web.chat.WebChat_Chat_service.repositories.ChatRepository;
 import com.web.chat.WebChat_Chat_service.repositories.MessageRepository;
@@ -19,9 +17,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
 
 
 @Service
