@@ -10,8 +10,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -41,11 +39,6 @@ public class AuthTokenFilter extends OncePerRequestFilter {
             String jwt = parseJwt(request);
             if (Objects.nonNull(jwt) && jwtUtils.validateJwtToken(jwt)) {
                 String username = jwtUtils.getUserNameFromJwtToken(jwt);
-                Claims claims = jwtUtils.getUserRolesFromJwtToken(jwt);
-                ArrayList<HashMap<String, String>> athor = (ArrayList) claims.get("Authorities");
-                Set<GrantedAuthority> athorities = new HashSet<>();
-                athor.forEach(map -> map
-                        .forEach((key, value) -> athorities.add(new SimpleGrantedAuthority(value))));
 
                 UserDetails userDetails = userDetailsService.loadUserByUsername(username);
                 userService.updateActiveTime(username);
